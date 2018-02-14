@@ -1,0 +1,13 @@
+<div class="container">
+  <h1><em style="color: green"><%= @restaurant.name%></em></h1>
+
+   <strong> <%= @restaurant.address %> </strong>
+    <% @reviews.each do |review| %>
+
+    <%= review.content %>
+
+  <% end %>
+  <%= link_to "new review", new_restaurant_review_path(@restaurant) %>
+  <p><%=link_to "Back to list", restaurants_path() %></p>
+
+</div>
